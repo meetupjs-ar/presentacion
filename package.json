@@ -1,0 +1,44 @@
+{
+  "name": "presentacion",
+  "description": "Slides para presentar la comunidad en cada evento",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "mkdir -p ./public/images && cp -R ./src/images/. ./public/images && mdx-deck build src/presentacion.mdx --out-dir public/",
+    "start": "mdx-deck src/presentacion.mdx",
+    "precommit": "lint-staged"
+  },
+  "author": "durancristhian@gmail.com",
+  "license": "MIT",
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --arrow-parens always --print-width 100 --single-quote --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "lint-staged": "^8.1.5",
+    "mdx-deck": "^2.3.2",
+    "prettier": "^1.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetupjs-ar/presentacion.github.io.git"
+  },
+  "keywords": [
+    "meetup",
+    "javascript",
+    "buenos aires"
+  ],
+  "bugs": {
+    "url": "https://github.com/meetupjs-ar/presentacion.github.io/issues"
+  },
+  "homepage": "https://presentacion.meetupjs.com.ar/"
+}
