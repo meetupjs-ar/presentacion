@@ -10,6 +10,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-shadow': 'off',
     'react/forbid-foreign-prop-types': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }]
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'import/no-extraneous-dependencies': 'off'
   }
 };

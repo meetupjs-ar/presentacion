@@ -10,10 +10,12 @@ const Page = ({ children, confetti }) => (
       borderTop: '5px solid #ffe45e',
       color: '#2e282a',
       display: 'flex',
+      fontFamily: '"Libre Franklin", "sans-serif"',
       flexDirection: 'column',
       fontSize: '30px',
       height: '100vh',
       justifyContent: 'center',
+      lineHeight: '1.25',
       position: 'relative',
       width: '100vw'
     }}

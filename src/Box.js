@@ -8,7 +8,7 @@ const Box = ({ image, text }) => (
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
-      padding: '1rem',
+      padding: '2vh',
       width: '25vw'
     }}
   >
@@ -16,9 +16,8 @@ const Box = ({ image, text }) => (
       src={`./images/${image}.svg`}
       alt={text}
       style={{
-        margin: '0 auto',
-        maxWidth: '10vw',
-        width: '100%'
+        margin: '0 auto 2vh',
+        maxWidth: '10vw'
       }}
     />
     <P>{text}</P>

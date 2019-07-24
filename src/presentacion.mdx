@@ -1,9 +1,17 @@
+import { Head } from 'mdx-deck';
 import Box from './Box';
 import Logo from './Logo';
 import P from './Paragraph';
 import Page from './Page';
 import Profile from './Profile';
 import Title from './Title';
+
+<Head>
+  <link
+    href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700&display=swap"
+    rel="stylesheet"
+  />
+</Head>
 
 <Page confetti>
   <Logo />
@@ -18,11 +26,11 @@ import Title from './Title';
       display: 'flex'
     }}
   >
-    <Profile twitter="durancristhian" name="Cristhian Duran" />
-    <Profile twitter="srgianu" name="Sergio Gianazza" />
-    <Profile twitter="camilunghi" name="Camila Cepeda" />
-    <Profile twitter="a0viedo" name="Alejandro Oviedo" />
-    <Profile twitter="mateosilguero1" name="Mateo Silguero" />
+    <Profile twitter="durancristhian" name="Cris" />
+    <Profile twitter="srgianu" name="Gianu" label="✈️" isNotPresent />
+    <Profile twitter="camilunghi" name="Cami" />
+    <Profile twitter="a0viedo" name="a0" />
+    <Profile twitter="mateosilguero1" name="Mate" isNew />
   </div>
 </Page>
 
@@ -45,9 +53,17 @@ import Title from './Title';
 ---
 
 <Page>
-  <Title text="En esta edición #52" />
+  <Title text="En esta edición #53" />
   <P>
-    Charlas, Kahoot!, <span style={{ fontStyle: 'normal' }}>🕸👷🏽‍♂️ y 🐺</span>
+    <span style={{ alignItems: 'center', display: 'flex' }}>
+      <span>Charlas, Kahoot!, stickers y</span>
+      <span style={{ fontStyle: 'normal', marginLeft: '8px' }}>🕸👩🏼‍💻</span>
+    </span>
+  </P>
+  <P>
+    <span style={{ display: 'block', fontSize: '1.15rem', marginTop: '5vh' }}>
+      Dado que no está Gianu, no habrá 🐺
+    </span>
   </P>
 </Page>
 
