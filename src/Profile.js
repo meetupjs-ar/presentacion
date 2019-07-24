@@ -14,7 +14,7 @@ const getFilter = (isNew, isNotPresent) => {
   return 'grayscale(100)';
 };
 
-const Profile = ({ isNew, isNotPresent, label, name, twitter }) => {
+const Profile = ({ isNew, isNotPresent, name, twitter }) => {
   return (
     <div
       style={{
@@ -22,25 +22,9 @@ const Profile = ({ isNew, isNotPresent, label, name, twitter }) => {
         flexDirection: 'column',
         justifyContent: 'center',
         padding: '2vh',
-        position: 'relative',
         width: '20vw'
       }}
     >
-      {label && (
-        <div
-          style={{
-            fontSize: 75,
-            left: 0,
-            position: 'absolute',
-            right: 0,
-            textAlign: 'center',
-            top: '4vh',
-            zIndex: 1
-          }}
-        >
-          {label}
-        </div>
-      )}
       <img
         src={`http://avatars.io/twitter/${twitter}`}
         alt={name}
@@ -59,15 +43,13 @@ const Profile = ({ isNew, isNotPresent, label, name, twitter }) => {
 Profile.propTypes = {
   isNew: PropTypes.bool,
   isNotPresent: PropTypes.bool,
-  label: PropTypes.string,
   name: PropTypes.string.isRequired,
   twitter: PropTypes.string.isRequired
 };
 
 Profile.defaultProps = {
   isNew: false,
-  isNotPresent: false,
-  label: ''
+  isNotPresent: false
 };
 
 export default Profile;
