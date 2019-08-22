@@ -17,7 +17,8 @@ const Profile = ({ isNotPresent, name, twitter }) => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '2rem'
+        padding: '2rem',
+        width: '25%'
       }}
     >
       <img
@@ -26,7 +27,6 @@ const Profile = ({ isNotPresent, name, twitter }) => {
         style={{
           filter: getFilter(isNotPresent),
           margin: '0 auto',
-          maxWidth: '18vw',
           width: '100%'
         }}
       />
