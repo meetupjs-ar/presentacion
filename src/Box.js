@@ -1,32 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import P from './Paragraph';
 
 const Box = ({ image, text }) => (
   <div
     style={{
+      alignItems: 'flex-start',
       display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      padding: '2vh',
-      width: '25vw'
+      marginTop: '2rem'
     }}
   >
-    <img
-      src={`./images/${image}.svg`}
-      alt={text}
+    {image && (
+      <div style={{ marginRight: '1rem' }}>
+        <img
+          src={`./images/${image}.svg`}
+          alt={text}
+          style={{
+            width: '50px'
+          }}
+        />
+      </div>
+    )}
+    <span
       style={{
-        margin: '0 auto 2vh',
-        maxWidth: '10vw'
+        lineHeight: '50px'
       }}
-    />
-    <P>{text}</P>
+    >
+      {text}
+    </span>
   </div>
 );
 
 Box.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   text: PropTypes.string.isRequired
+};
+
+Box.defaultProps = {
+  image: false
 };
 
 export default Box;

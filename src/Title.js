@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Title = ({ text }) => (
   <h1
     style={{
-      margin: '3vh 0'
+      margin: '2rem 0'
     }}
   >
     {text}

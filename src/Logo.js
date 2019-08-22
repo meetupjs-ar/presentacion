@@ -5,7 +5,7 @@ const Logo = () => (
     src="./images/logo.svg"
     alt="Meetup.js Buenos Aires"
     style={{
-      height: '60vh'
+      height: '480px'
     }}
   />
 );

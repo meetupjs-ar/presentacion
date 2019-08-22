@@ -7,13 +7,11 @@ import Profile from './Profile';
 import Title from './Title';
 
 <Head>
-  <link
-    href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700" rel="stylesheet" />
 </Head>
 
 <Page confetti>
+  <Title text="Bienvenides al evento #54" />
   <Logo />
 </Page>
 
@@ -26,58 +24,71 @@ import Title from './Title';
       display: 'flex'
     }}
   >
-    <Profile twitter="durancristhian" name="Cris" />
-    <Profile twitter="srgianu" name="Gianu" isNotPresent />
-    <Profile twitter="camilunghi" name="Cami" />
     <Profile twitter="a0viedo" name="a0" />
-    <Profile twitter="mateosilguero1" name="Mate" isNew />
+    <Profile twitter="camilunghi" name="Cami" />
+    <Profile twitter="durancristhian" name="Cris" />
+    <Profile twitter="srgianu" name="Gianu" />
+    <Profile twitter="mateosilguero1" name="Mate" />
   </div>
 </Page>
 
 ---
 
 <Page>
-  <Title text="Donde encontrarnos" />
-  <div
-    style={{
-      display: 'flex'
-    }}
-  >
-    <Box image="twitter" text="@meetupjs_ar" />
-    <Box image="youtube" text="Meetup.js Buenos Aires" />
-    <Box image="facebook" text="Meetup.js Buenos Aires" />
-    <Box image="website" text="meetupjs.com.ar" />
-  </div>
+  <Title text="Sobre Meetup.js" />
+  <Box text="Arrancamos en 2013, ya hicimos más de 50 eventos 🤓" />
+  <Box text="En Slack hay más de 2500 personas 👨🏻‍💻👩🏻‍💻" />
+  <Box text="Intentamos hacer eventos a los que quieras volver ❤️" />
 </Page>
 
 ---
 
 <Page>
-  <Title text="En esta edición #53" />
+  <Title text="Redes Sociales" />
+  <Box image="twitter" text="@meetupjs_ar" />
+  <Box image="youtube" text="Meetup.js Buenos Aires" />
+  <Box image="facebook" text="Meetup.js Buenos Aires" />
+  <Box image="website" text="meetupjs.com.ar" />
+</Page>
+
+---
+
+<Page>
+  <Title text="Noticias" />
   <P>
-    <span>Charla de </span>
-    <strong>Lucas</strong>
-    <span style={{ marginLeft: '16px' }}>🔥🅱️</span>
+    <span>Salimos en </span>
+    <strong>InfoTechnology</strong>
+    <span style={{ marginLeft: '.5rem' }}>🗞🎉</span>
   </P>
   <P>
-    <span>Charla de </span>
-    <strong>Gonza</strong>
-    <span style={{ marginLeft: '16px' }}>🐛🚫</span>
+    <span>De ahora en más, la registración la vamos a hacer por </span>
+    <strong>Eventbrite</strong>
+  </P>
+</Page>
+
+---
+
+<Page>
+  <Title text="En esta edición #54" />
+  <P>
+    <strong>SvelteJS: Ni librería ni framework... COMPILADOR!!!</strong>
+    <span> por Seba</span>
+  </P>
+  <P>
+    <strong>What's next in Vue.js?</strong>
+    <span> por Nacho</span>
   </P>
   <P>
     <strong>Kahoot! </strong>
     <span>con premios</span>
-    <span style={{ marginLeft: '8px' }}>📱</span>
+    <span style={{ marginLeft: '.5rem' }}>📱</span>
   </P>
   <P>
     <strong>Stickers</strong>
-    <span style={{ marginLeft: '8px' }}>✨</span>
+    <span style={{ marginLeft: '.5rem' }}>✨</span>
   </P>
-  <P>🕸👩🏼‍💻</P>
   <P>
-    <span style={{ display: 'block', fontSize: '1.15rem', marginTop: '8vh' }}>
-      Dado que no está <strong>Gianu</strong>, no habrá 🐺
-    </span>
+    <span style={{ fontSize: '5rem' }}>🕸👨🏻‍💻</span>
   </P>
 </Page>
 
@@ -86,7 +97,7 @@ import Title from './Title';
 <Page>
   <Title text="Charlas" />
   <P>
-    Subí tu propuesta a <strong>github.com/meetupjs-ar/charlas</strong>
+    Subí tu propuesta en <strong>meetupjs.com.ar</strong> 👌🏻
   </P>
 </Page>
 
@@ -94,8 +105,13 @@ import Title from './Title';
 
 <Page>
   <Title text="Agradecimientos" />
-  <P>Avature por el 🏢, la 🍗 y la 🥤</P>
-  <P>LVDE ❤️</P>
+  <P>
+    A <strong>Softvision</strong> por el espacio y la couta alimenticia y bebidicia 🤩
+  </P>
+  <P>
+    A la <strong>Asociación Civil La Vereda de Enfrente</strong> por dejarnos ayudar
+    <span style={{ marginLeft: '.5rem' }}>❤️</span>
+  </P>
 </Page>
 
 ---
