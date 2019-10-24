@@ -4,7 +4,7 @@ import P from './Paragraph';
 
 const getFilter = isNotPresent => {
   if (isNotPresent) {
-    return 'blur(5px)';
+    return 'grayscale(100%)';
   }
 
   return 'initial';
