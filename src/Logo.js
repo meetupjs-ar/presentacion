@@ -1,13 +1,16 @@
 import React from 'react';
 
-const Logo = () => (
+const Logo = ({ src, alt }) => (
   <img
-    src="./images/logo.svg"
-    alt="Meetup.js Buenos Aires"
-    style={{
-      height: '480px'
-    }}
+    src={src}
+    alt={alt}
+    style={{ height: '480px' }}
   />
 );
+
+Logo.defaultProps = {
+  src: "./images/logo.svg",
+  alt: "Meetup.js Buenos Aires"
+}
 
 export default Logo;

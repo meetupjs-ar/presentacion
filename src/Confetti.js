@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useLayoutEffect } from 'react';
 
 const confettiBaseStyles = {
   animation: 'confetti 5s ease-in-out -2s infinite',
@@ -16,6 +16,7 @@ const confetti1 = {
   backgroundColor: '#f2d74e',
   left: '5%'
 };
+
 const confetti2 = {
   ...confettiBaseStyles,
 
@@ -23,6 +24,7 @@ const confetti2 = {
   backgroundColor: '#95c3de',
   left: '10%'
 };
+
 const confetti3 = {
   ...confettiBaseStyles,
 
@@ -30,6 +32,7 @@ const confetti3 = {
   backgroundColor: '#ff9a91',
   left: '15%'
 };
+
 const confetti4 = {
   ...confettiBaseStyles,
 
@@ -37,6 +40,7 @@ const confetti4 = {
   backgroundColor: '#f2d74e',
   left: '20%'
 };
+
 const confetti5 = {
   ...confettiBaseStyles,
 
@@ -44,6 +48,7 @@ const confetti5 = {
   backgroundColor: '#f2d74e',
   left: '25%'
 };
+
 const confetti6 = {
   ...confettiBaseStyles,
 
@@ -51,6 +56,7 @@ const confetti6 = {
   backgroundColor: '#95c3de',
   left: '30%'
 };
+
 const confetti7 = {
   ...confettiBaseStyles,
 
@@ -58,6 +64,7 @@ const confetti7 = {
   backgroundColor: '#ff9a91',
   left: '35%'
 };
+
 const confetti8 = {
   ...confettiBaseStyles,
 
@@ -65,6 +72,7 @@ const confetti8 = {
   backgroundColor: '#f2d74e',
   left: '40%'
 };
+
 const confetti9 = {
   ...confettiBaseStyles,
 
@@ -72,6 +80,7 @@ const confetti9 = {
   backgroundColor: '#f2d74e',
   left: '45%'
 };
+
 const confetti10 = {
   ...confettiBaseStyles,
 
@@ -79,6 +88,7 @@ const confetti10 = {
   backgroundColor: '#95c3de',
   left: '50%'
 };
+
 const confetti11 = {
   ...confettiBaseStyles,
 
@@ -86,6 +96,7 @@ const confetti11 = {
   backgroundColor: '#ff9a91',
   left: '55%'
 };
+
 const confetti12 = {
   ...confettiBaseStyles,
 
@@ -93,6 +104,7 @@ const confetti12 = {
   backgroundColor: '#f2d74e',
   left: '60%'
 };
+
 const confetti13 = {
   ...confettiBaseStyles,
 
@@ -100,6 +112,7 @@ const confetti13 = {
   backgroundColor: '#f2d74e',
   left: '65%'
 };
+
 const confetti14 = {
   ...confettiBaseStyles,
 
@@ -107,6 +120,7 @@ const confetti14 = {
   backgroundColor: '#95c3de',
   left: '70%'
 };
+
 const confetti15 = {
   ...confettiBaseStyles,
 
@@ -114,6 +128,7 @@ const confetti15 = {
   backgroundColor: '#ff9a91',
   left: '75%'
 };
+
 const confetti16 = {
   ...confettiBaseStyles,
 
@@ -121,6 +136,7 @@ const confetti16 = {
   backgroundColor: '#f2d74e',
   left: '80%'
 };
+
 const confetti17 = {
   ...confettiBaseStyles,
 
@@ -128,6 +144,7 @@ const confetti17 = {
   backgroundColor: '#f2d74e',
   left: '85%'
 };
+
 const confetti18 = {
   ...confettiBaseStyles,
 
@@ -135,6 +152,7 @@ const confetti18 = {
   backgroundColor: '#95c3de',
   left: '90%'
 };
+
 const confetti19 = {
   ...confettiBaseStyles,
 
@@ -142,6 +160,7 @@ const confetti19 = {
   backgroundColor: '#ff9a91',
   left: '95%'
 };
+
 const confetti20 = {
   ...confettiBaseStyles,
 
@@ -150,6 +169,7 @@ const confetti20 = {
   left: '95%'
 };
 
+// util/helper
 const injectStyle = style => {
   const styleElement = document.createElement('style');
   let styleSheet = null;
@@ -160,45 +180,44 @@ const injectStyle = style => {
   styleSheet.insertRule(style, styleSheet.cssRules.length);
 };
 
-class Confetti extends Component {
-  componentDidMount() {
-    injectStyle(`
-        @keyframes confetti {
-            0% { transform: rotateZ(15deg) rotateY(0deg) translate(0, 0); }
-            25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh); }
-            50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh); }
-            75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh); }
-            100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh); }
-        }
-    `);
-  }
+function Confetti() {
 
-  render() {
-    return (
-      <React.Fragment>
-        <div style={confetti1} />
-        <div style={confetti2} />
-        <div style={confetti3} />
-        <div style={confetti4} />
-        <div style={confetti5} />
-        <div style={confetti6} />
-        <div style={confetti7} />
-        <div style={confetti8} />
-        <div style={confetti9} />
-        <div style={confetti10} />
-        <div style={confetti11} />
-        <div style={confetti12} />
-        <div style={confetti13} />
-        <div style={confetti14} />
-        <div style={confetti15} />
-        <div style={confetti16} />
-        <div style={confetti17} />
-        <div style={confetti18} />
-        <div style={confetti19} />
-        <div style={confetti20} />
-      </React.Fragment>
-    );
-  }
+  useLayoutEffect(() => {
+    injectStyle(`
+      @keyframes confetti {
+          0% { transform: rotateZ(15deg) rotateY(0deg) translate(0, 0); }
+          25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh); }
+          50% { transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh); }
+          75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh); }
+          100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh); }
+      }
+    `);
+  }, [])
+
+  return (
+    <React.Fragment>
+      <div style={confetti1} />
+      <div style={confetti2} />
+      <div style={confetti3} />
+      <div style={confetti4} />
+      <div style={confetti5} />
+      <div style={confetti6} />
+      <div style={confetti7} />
+      <div style={confetti8} />
+      <div style={confetti9} />
+      <div style={confetti10} />
+      <div style={confetti11} />
+      <div style={confetti12} />
+      <div style={confetti13} />
+      <div style={confetti14} />
+      <div style={confetti15} />
+      <div style={confetti16} />
+      <div style={confetti17} />
+      <div style={confetti18} />
+      <div style={confetti19} />
+      <div style={confetti20} />
+    </React.Fragment>
+  )
 }
 
 export default Confetti;

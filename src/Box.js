@@ -36,7 +36,7 @@ Box.propTypes = {
 };
 
 Box.defaultProps = {
-  image: false
+  image: ''
 };
 
 export default Box;
