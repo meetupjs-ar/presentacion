@@ -9,8 +9,8 @@ const Logo = ({ src, alt }) => (
 );
 
 Logo.defaultProps = {
-  src: "./images/logo.svg",
-  alt: "Meetup.js Buenos Aires"
+  src: "",
+  alt: ""
 }
 
 export default Logo;
